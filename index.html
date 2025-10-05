@@ -19,30 +19,25 @@
       <p>If it doesn’t start automatically, click this link:</p>
       <p>
         <a id="manual" class="btn"
-           href="/VR/pdf/HearWeGo-SupportingDocumentationn.pdf"
+           href="./pdf/HearWeGo-SupportingDocumentation.pdf"
            download="HearWeGo-SupportingDocumentation.pdf">
            Download “HearWeGo-SupportingDocumentation.pdf”
         </a>
       </p>
       <p class="dim">You can close this tab after the download begins.</p>
-      <p class="dim"><button id="closeBtn" class="btn" type="button">Close tab</button></p>
     </main>
   </div>
 
   <script>
     (function () {
-      const filePath = "/VR/pdf/HearWeGo-SupportingDocumentation.pdf";
-      const a = document.createElement("a");
+      var filePath = "./pdf/HearWeGo-SupportingDocumentation.pdf";
+      var a = document.createElement("a");
       a.href = filePath;
       a.download = "HearWeGo-SupportingDocumentation.pdf";
       a.style.display = "none";
       document.body.appendChild(a);
       window.addEventListener("load", function () {
         try { a.click(); } catch (e) {}
-        setTimeout(function(){ window.close(); }, 1200);
-      });
-      document.getElementById("closeBtn").addEventListener("click", function () {
-        window.close();
       });
     })();
   </script>
